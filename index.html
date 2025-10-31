@@ -1,91 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Responsive Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- boxicons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-
-   <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-          rel="stylesheet" 
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-          crossorigin="anonymous">
-
-    <!--  Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
+        /* Custom styling for smoother scrolling and clean base */
         html {
             scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body>
+<body class="bg-black">
 
-
-    <!--navbar-->
-
-
-    <nav class="fixed top-0 z-50 w-full bg-gray-900 text-white backdrop-blur-sm shadow-lg animate__animated animate__fadeInDown">
+    <!-- Navbar -->
+    <nav class="fixed top-0 z-50 w-full bg-gray-900 text-white backdrop-blur-sm shadow-xl animate__animated animate__fadeInDown">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Brand/Name -->
-                <div class="flex items-center animate_animated animate_fadeInDown">
-                    <p class="brand text-2xl font-bold text-red-600">
-                        M
-                    </p>
-                    <p class="brand text-xl font-bold text-white">
-                        UTHULAKSHMI  V
-                    </p>
+                <div class="flex items-center">
+                    <p class="brand text-2xl font-extrabold text-rose-500">M</p>
+                    <p class="brand text-xl font-bold text-white tracking-wider">UTHULAKSHMI V</p>
                 </div>
 
                 <!-- Desktop Links -->
-                <div class="hidden md:block animate_animated animate_fadeInDown">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#Home" class="nav-link text-white px-3 py-2 p-2 text-lg rounded-md hover:underline font-bold p-2">
-                            Home
-                        </a>
-
-                        <a href="#about" class="nav-link text-white px-3 py-2 p-2 text-lg rounded-md hover:underline font-bold p-2">
-                            About
-                        </a>
-                        <a href="#skills" class="nav-link text-white px-3 py-2 p-2 text-lg rounded-md hover:underline font-bold p-2">
-                            SKills
-                        </a>
-
-                        <a href="#internship" class="nav-link text-white px-3 py-2 p-2 text-lg rounded-md hover:underline font-bold p-2">
-                            Internship</a>
-
-                        <a href="#projects" class="nav-link text-white px-3 py-2 p-2 text-lg rounded-md hover:underline font-bold p-2">
-                            Projects
-                        </a>
-
-                        <a href="#certifications" class="nav-link text-white px-3 py-2 p-2 text-lg rounded-md hover:underline font-bold p-2">
-                            Certifications
-                        </a>
-                        <a href="#contact" class="nav-link text-white px-3 py-2 p-2 text-lg hover:underline font-bold p-2">
-                            Contact
-                        </a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#Home" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">Home</a>
+                        <a href="#about" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">About</a>
+                        <a href="#skills" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">Skills</a>
+                        <a href="#internship" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">Internship</a>
+                        <a href="#projects" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">Projects</a>
+                        <a href="#certifications" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">Certifications</a>
+                        <a href="#contact" class="nav-link text-white text-lg font-semibold hover:text-rose-500 transition duration-300">Contact</a>
                     </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="-mr-2 flex md:hidden">
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text- hover:text-white hover:bg-[#3A3A40] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-400 focus:ring-neutral-600" aria-controls="mobile-menu" aria-expanded="false">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-rose-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-rose-500" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
-                        <!-- Hamburger Icon -->
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <!-- Close Icon (Hidden by default) -->
                         <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -96,340 +64,257 @@
 
         <!-- Mobile Menu Links -->
         <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <div class="bg-gray-900 text-white">
-                    <a href="#Home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white" aria-current="page">
-                        Home
-                    </a>
-                    <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">
-                        About
-
-                    </a>
-                    <a href="#skills" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">
-                        Skills
-                    </a>
-                    <a href="#internship" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">
-                        Internship
-                    </a>
-                    <a href="#projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">
-                        Projects
-                    </a>
-                    <a href="#certifications" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">
-                        Certificates
-                    </a>
-
-                    <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">
-                        Contact
-                    </a>
-                </div>
-
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800">
+                <a href="#Home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Home</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">About</a>
+                <a href="#skills" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Skills</a>
+                <a href="#internship" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white">Internship</a>
+                <a href="#projects" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Projects</a>
+                <a href="#certifications" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Certifications</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">Contact</a>
             </div>
         </div>
     </nav>
 
+    <!-- Home Section -->
+    <div id="Home" class="pt-28 py-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid xl:grid-cols-2 items-center" data-aos="zoom-in">
 
-
-
-    <!--img-->
-    <div id="Home">
-        <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 bg-black text-white items-center pt-28 py-8" data-aos="zoom-in">
-                <div class="px-40">
-                    <img src="../asset/IMG_20240323_103734.jpg" alt="" width="300" height="500" class="rounded-full border-2 border-white border-rounded-full p-2 animate__animated animate__bounceInLeft">
+                <!-- Image Column -->
+                <div class="flex justify-center xl:justify-start mb-8 xl:mb-0 animate__animated animate__bounceInLeft">
+                    <!-- Placeholder image used for runnable code -->
+                    <img src="./IMG_20240323_103734.jpg" alt="Muthulakshmi V" width="300" height="300" class="rounded-full border-4 border-rose-500 p-2 object-cover">
                 </div>
-                <div class="text-center bg-black text-white pt-10 pr-30 animate__animated animate__fadeInDown animate__delay-1s">
-                    <span class="text-xl font-bold pt-2 pr-8">
-                        Hello, It's Me
-                    </span> <br>
 
-                    <span class="text-right text-rose-500 text-3xl text-center justify-center font-bold text-black py-2 pt-2 pb-2 animate__animated animate__bounce animate__delay-0.5s">
+                <!-- Text Column -->
+                <div class="text-center xl:text-left animate__animated animate__fadeInDown animate__delay-1s">
+                    <span class="text-xl font-medium block mb-2">Hello, It's Me</span>
+                    <h1 class="text-rose-500 text-4xl sm:text-5xl font-extrabold mb-4 animate__animated animate__bounce animate__delay-0.5s">
                         Muthulakshmi V
-                    </span> <br>
+                    </h1>
 
-                    <span class="items-center font-bold py-2 gap-2 text-center">
-                        I am a web Developer, Enthusiastic and detail-oriented <br> junior tech professional with
-                        a passion for problem-solving <br> and continuous learning. Seeking
-                        an entry-level role where <br> I can contribute to innovative
-                        projects and grow as a developer <br> in a collaborative team environment
-                    </span>
+                    <p class="font-light text-gray-300 text-lg mb-6 max-w-lg xl:max-w-none mx-auto">
+                        I am a Web Developer, enthusiastic and detail-oriented junior tech professional with a passion for problem-solving and continuous learning. Seeking an entry-level role where I can contribute to innovative projects and grow as a developer in a collaborative team environment.
+                    </p>
 
-                    <div class="text-center py-2 flex justify-center gap-4 pl-4">
-                        <a href="https://github.com/" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-gray-100 hover:text-black transition">
+                    <!-- Social Links -->
+                    <div class="flex justify-center xl:justify-start gap-4 mb-8">
+                        <a href="https://github.com/" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-rose-500 hover:border-rose-500 transition duration-300">
                             <i class="bx bxl-github text-2xl"></i>
                         </a>
-                        <a href="https://github.com/" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-gray-100 hover:text-black transition">
+                        <a href="https://linkedin.com/" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-rose-500 hover:border-rose-500 transition duration-300">
                             <i class="bx bxl-linkedin text-2xl"></i>
                         </a>
                     </div>
 
-
-                    <div class="text-center py-2 pl-4">
-                        <a href="./Muthulakshmi Resume.pdf">
-                            <button class="hover:bg-gray-900 text-white bg-black text-white border-2 border-white font-bold py-2 px-10 rounded-full transition animate__animated animate__pulse animate__infinite">
-                                Download CV
-                            </button>
-                        </a>
-                    </div>
+                    <!-- CV Button -->
+                    <a href="./Muthulakshmi Resume.pdf" target="_blank" class="inline-block">
+                        <button class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 animate__animated animate__pulse animate__infinite">
+                            Download CV
+                        </button>
+                    </a>
                 </div>
-    
+            </div>
         </div>
     </div>
 
-
-        
-        
-    <!--about-->
-
-    <div id="about">
-        <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-black text-white items-center py-8" data-aos="zoom-out">
-            <div class="text-center py-10 bg-gray-900 text-white p-10">
-                <p class="font-bold text-5xl items-center py-4 text-rose-500 animate__animated animate__fadeInDown">
+    <!-- About Section -->
+    <div id="about" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="zoom-out">
+            <div class="text-center">
+                <h2 class="font-bold text-4xl sm:text-5xl text-rose-500 mb-8 animate__animated animate__fadeInDown">
                     About Me
-                </p>
+                </h2>
 
-                <div class="animate__animated animate__fadeInDown animate__delay-2s">
-                    <p class="text-white font-bold text-xl text-center justify-center py-8 gap-2 p-2">
-                        Passionate about frontend Development and a <br> strong br desire to learn and grow professionally  <br> and
-                        Eager to learn and contribute to the environment.Seeking a <br> frontend developer
-                        role where I can contribute to building <br> modern and interactive web uniquely blend of skills
-                        <br> and passion making me a valuable asset in my field.
+                <div class="animate__animated animate__fadeInDown animate__delay-1s">
+                    <p class="text-gray-300 font-medium text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed px-4">
+                        Passionate about **frontend Development** and a strong desire to learn and grow professionally. Eager to learn and contribute to the environment, seeking a frontend developer role where I can contribute to building modern and interactive web applications. My uniquely blended set of skills and passion makes me a valuable asset in this field. I thrive in environments that challenge me to continuously improve my technical expertise.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Skills Section -->
+    <div id="skills" class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h2 class="font-bold text-4xl sm:text-5xl text-center text-rose-500 mb-12">
+                Skills
+            </h2>
 
+            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 justify-items-center">
 
-    <!--Skills-->
-        <div id="skills">
-            <div class="bg-black text-rose-500 py-6" data-aos="fade-up">
-                <p class="font-bold text-5xl text-center py-4">
-                    Skills
-                </p>
+                <!-- Skill Item Template (Responsive icons and centered) -->
+                <div class="flex flex-col items-center py-4" data-aos="flip-left">
+                    <img src="./" alt="Python" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Python</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-right">
+                    <img src="https://placehold.co/80x80/F0DB4F/000000?text=JS" alt="Javascript" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Javascript</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-left">
+                    <img src="https://placehold.co/80x80/06B6D4/FFFFFF?text=TW" alt="Tailwind CSS" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Tailwind Css</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-right">
+                    <img src="./icons8-css-48.png" alt="CSS" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Css</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-left">
+                    <img src="https://placehold.co/80x80/7952B3/FFFFFF?text=BS" alt="Bootstrap" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Bootstrap</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-right">
+                    <img src="https://placehold.co/80x80/4479A1/FFFFFF?text=SQL" alt="SQL" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">SQL</p>
+                </div>
 
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 text-white pl-40 py-10 items-center">
-                        <div class="py-6" data-aos="flip-left">
-                            <img src="./python.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-4 py-2">
-                                Python
-                            </p>
-                        </div>
-                        <div class="py-6" data-aos="flip-right">
-                            <img src="./java-script.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-2 py-2">
-                                Javascript
-                            </p>
-                        </div>
-                        <div data-aos="flip-left">
-                            <img src="./icons8-tailwind-css-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-2 py-2">
-                                Tailwind Css
-                            </p>
-                        </div>
-                        <div data-aos="flip-right">
-                            <img src="./icons8-css-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-7 py-2">
-                                Css
-                            </p>
-                        </div>
-                        <div data-aos="flip-left">
-                            <img src="./icons8-bootstrap-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-2 py-2">
-                                Bootstrap
-                            </p>
-                        </div>
-                        <div data-aos="flip-right">
-                            <img src="./icons8-sql-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-6 py-2">
-                               SQL
-                            </p>
-                        </div>
-
-                        <div data-aos="flip-left">
-                            <img src="./icons8-mongo-db-96.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white py-2">
-                                MongoDB
-                            </p>
-                        </div>
-                        <div data-aos="flip-right">
-                            <img src="./icons8-adobe-xd-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white  py-2">
-                                Adobe XD
-                            </p>
-                        </div>
-                        <div data-aos="flip-left">
-                            <img src="./icons8-react-24.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-4 py-2">
-                                React Js
-                            </p>
-                        </div>
-                        <div data-aos="flip-right">
-                            <img src="./icons8-figma-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-4 py-2">
-                                Figma
-                            </p>
-                        </div>
-                        <div data-aos="flip-left">
-                            <img src="./icons8-canva-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-4 py-2">
-                                Canva
-                            </p>
-                        </div>
-                        <div data-aos="flip-right">
-                            <img src="./icons8-github-48.png" alt="" width="80" height="50">
-                            <p class="items-center justify-center font-bold text-white px-4 py-2">
-                                Github
-                            </p>
-                        </div>
-                    </div>
-           </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-left">
+                    <img src="https://placehold.co/80x80/47A248/FFFFFF?text=MONGO" alt="MongoDB" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">MongoDB</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-right">
+                    <img src="https://placehold.co/80x80/FF6600/FFFFFF?text=XD" alt="Adobe XD" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Adobe XD</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-left">
+                    <img src="https://placehold.co/80x80/61DAFB/000000?text=React" alt="React Js" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">React Js</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-right">
+                    <img src="https://placehold.co/80x80/F24E1E/FFFFFF?text=Figma" alt="Figma" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Figma</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-left">
+                    <img src="https://placehold.co/80x80/484C7F/FFFFFF?text=Canva" alt="Canva" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Canva</p>
+                </div>
+                <div class="flex flex-col items-center py-4" data-aos="flip-right">
+                    <img src="https://placehold.co/80x80/000000/FFFFFF?text=GH" alt="Github" class="w-16 h-16 sm:w-20 sm:h-20 object-contain">
+                    <p class="mt-2 font-bold text-sm sm:text-base">Github</p>
+                </div>
+            </div>
         </div>
+    </div>
 
-        
-
- 
-    
-    <!--Internship-->
-
-    <div id="internship">
-        <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-gray-900 p-10" data-aos="zoom-out">
-            <p class="font-bold text-5xl text-center px-40 text-rose-500 animate__animated animate__bounceIn">
-                Internship <br>
-                <p class="text-center justify-center font-bold text-xl text-white py-6 animate__animated animate__fadeInDown animate__delay-1s">
-                    Tech-Associate at PIXELIN
-                </p>
+    <!-- Internship Section -->
+    <div id="internship" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="zoom-out">
+            <h2 class="font-bold text-4xl sm:text-5xl text-center text-rose-500 mb-4 animate__animated animate__bounceIn">
+                Internship
+            </h2>
+            <p class="text-center font-bold text-2xl sm:text-3xl text-white mb-8 animate__animated animate__fadeInDown animate__delay-1s">
+                Tech-Associate at PIXELIN
             </p>
 
-            <div class="text-white font-bold text-xl text-center justify-center py-6 px-40 animate__animated animate__fadeInDown animate__delay-2s">
-                    I collaborated closely with the UI/UX team to refine
-                    design flows and enhance accessibility across internal platforms. My role also involved participating in
-                    architecture diagram planning, which deepened my understanding of system design and scalability.
-                    Beyond technical contributions, I significantly developed my decision-making and problem-solving skills
-                    by analyzing user feedback, prioritizing feature enhancements,
-                    I focused on crafting intuitive and responsive user interfaces that enhanced overall user experience across devices.
-                    Throughout this experience,  I developed a stronger sense of design thinking and user empathy, which sharpened my decision-making and problem-solving abilities.
-                    Regular collaboration with cross-functional teams helped me grow as a communicator and taught me how to balance user
-                    needs with technical feasibility.
+            <div class="text-gray-300 font-medium text-lg max-w-4xl mx-auto leading-relaxed text-center animate__animated animate__fadeInDown animate__delay-2s">
+                <p class="px-4">
+                    I collaborated closely with the UI/UX team to refine design flows and enhance accessibility across internal platforms. My role also involved participating in architecture diagram planning, which deepened my understanding of system design and scalability. Beyond technical contributions, I significantly developed my decision-making and problem-solving skills by analyzing user feedback, prioritizing feature enhancements. I focused on crafting intuitive and **responsive user interfaces** that enhanced overall user experience across devices. Throughout this experience, I developed a stronger sense of design thinking and user empathy, which sharpened my decision-making and problem-solving abilities. Regular collaboration with cross-functional teams helped me grow as a communicator and taught me how to balance user needs with technical feasibility.
                 </p>
             </div>
         </div>
-
     </div>
 
+    <!-- Projects Section -->
+    <div id="projects" class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <h2 class="font-bold text-4xl sm:text-5xl text-center text-rose-500 mb-12 animate__animated animate__bounceIn">
+                Projects
+            </h2>
 
-    <!--Projects-->
-    <div id="projects">
-        <div>
-            <div class="bg-black text-rose-500 py-10" data-aos="fade-up">
-                <p class="font-bold text-5xl text-center px-40 py-4  animate__animated animate__bounceIn">
-                    Projects
-                </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 animate__animated animate__fadeInDown animate__delay-2s">
 
-                <div class="animate__animated animate__fadeInDown animate__delay-2s">
-                    <div class="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 px-40 gap-6">
-                        <div class="text-white bg-gray-900 font-bold py-4 text-center hover:border border-white rounded-xl justify-center tracking-widest px-10 pb-4 p-2 mt-4" data-aos="fade-left">
-                            GROCERY WEBSITE
-                            <p class="py-4">
-                                Built a responsive grocery shopping web application using HTML, CSS, JavaScript, Tailwind Css,
-                                Bootstrap and Express.js for backend logic.
-                                Integrated MongoDB for product inventory and order storage, enabling efficient CRUD operations.
-                                Implemented key features like user authentication and  product and order management.
-                                Followed UI/UX best practices to deliver a clean, intuitive user experience across devices.
-                                Providing a seamless and responsive shopping experience.
-                            </p>
-                        </div>
-
-                        <div class="text-white bg-gray-900 font-bold  py-4 text-center hover:border border-white rounded-xl justify-center tracking-widest px-10 pb-4 p-2 mt-4" data-aos="fade-right">
-                            COOK BOOK WEBSITE
-                            <p class="py-4">
-                                Built a responsive recipe website using React.js, focusing on modular component architecture
-                                Designed interactive UI components for viewing, searching and preparation time
-                                Managed state using React hooks (useState, useEffect) for dynamic recipe display and UI
-                                responsiveness.
-                                Ensured smooth UX with client-side routing via React Router, supporting seamless page transitions
-                                Followed UI/UX principles, including visual hierarchy and accessibility, to enhance engagement
-                            </p>
-                        </div>
-                    </div>
-
+                <div class="bg-gray-900 font-semibold p-6 rounded-xl shadow-xl hover:border-2 border-rose-500 transition duration-300" data-aos="fade-left">
+                    <h3 class="text-2xl text-rose-500 tracking-widest text-center mb-4">GROCERY WEBSITE</h3>
+                    <p class="text-gray-300 text-base leading-relaxed text-left">
+                        Built a **responsive grocery shopping web application** using HTML, CSS, JavaScript, Tailwind CSS, Bootstrap and Express.js for backend logic. Integrated **MongoDB** for product inventory and order storage, enabling efficient CRUD operations. Implemented key features like user authentication and product and order management, providing a seamless and responsive shopping experience.
+                    </p>
                 </div>
 
-                <div class="grid grid-cols-4 animate__animated animate__fadeInDown animate__delay-2s">
-
+                <div class="bg-gray-900 font-semibold p-6 rounded-xl shadow-xl hover:border-2 border-rose-500 transition duration-300" data-aos="fade-right">
+                    <h3 class="text-2xl text-rose-500 tracking-widest text-center mb-4">COOK BOOK WEBSITE</h3>
+                    <p class="text-gray-300 text-base leading-relaxed text-left">
+                        Built a responsive recipe website using **React.js**, focusing on modular component architecture. Designed interactive UI components for viewing, searching and preparation time. Managed state using React hooks (`useState`, `useEffect`) for dynamic recipe display and UI responsiveness. Ensured smooth UX with client-side routing, following UI/UX principles, including visual hierarchy and accessibility, to enhance engagement.
+                    </p>
                 </div>
             </div>
         </div>
-
     </div>
-    
 
-    <!--certification-->
+    <!-- Certification Section -->
+    <div id="certifications" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-bold text-4xl sm:text-5xl text-center text-rose-500 mb-12 animate__animated animate__bounceIn">
+                Certifications
+            </h2>
 
-    <div id="certifications">
-        <div class="px-40 gap-4 px-3 py-9  bg-gray-900 text-white text-center tracking-widest p-9">
-                <p class="justify-center text-center font-bold text-5xl text-left  text-rose-500 animate__animated animate__bounceIn">
-                    Certification
-                </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <div class="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 py-8 w-full">
-                <div class="bg-white border rounded-2xl overflow-hidden card" data-aos="fade-right">
-                    <img src="./ds.jpg" alt="" class="w-full h-44 object-cover">
+                <!-- Certification Card Template -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 card" data-aos="fade-right">
+                    <img src="https://placehold.co/600x250/374151/FFFFFF?text=Cert+1" alt="Certificate Image" class="w-full h-44 object-cover">
                     <div class="p-5">
-                        <p class="text-black font-bold">Infosys <br> Python For Data Science</p>
-                        <div class="items-center mt-4">
-                            <a href="./sprinboard.jpg" class="text-rose-500 text-sm font-medium font-bold hover:underline">View Certificate</a>
+                        <p class="text-black font-extrabold text-xl">Infosys</p>
+                        <p class="text-gray-700 font-medium">Python For Data Science</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold hover:text-rose-700 transition duration-300">View Certificate</a>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="bg-white border rounded-2xl overflow-hidden card" data-aos="fade-left">
-                    <img src="./ml.jpg" alt="" class="w-full h-44 object-cover">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 card" data-aos="fade-left">
+                    <img src="https://placehold.co/600x250/374151/FFFFFF?text=Cert+2" alt="Certificate Image" class="w-full h-44 object-cover">
                     <div class="p-5">
-                        <p class="text-black font-bold"> NPTEL <br> Introduction to Machine Learning</p>
-                        <div class="items-center mt-4">
-                            <a href="./nptel%20(2).jpg" class="text-rose-500 text-sm font-medium font-bold hover:underline">View Certificate</a>
+                        <p class="text-black font-extrabold text-xl">NPTEL</p>
+                        <p class="text-gray-700 font-medium">Introduction to Machine Learning</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold hover:text-rose-700 transition duration-300">View Certificate</a>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="bg-white border rounded-2xl overflow-hidden card" data-aos="fade-right">
-                    <img src="./py.jpg" alt="" class="w-full h-44 object-cover">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 card" data-aos="fade-right">
+                    <img src="https://placehold.co/600x250/374151/FFFFFF?text=Cert+3" alt="Certificate Image" class="w-full h-44 object-cover">
                     <div class="p-5">
-                        <p class="text-black font-bold">Great Learning <br>Machine Learning for Python</p>
-                        <div class="items-center mt-4">
-                            <a href="./greatlearning.jpg" class="text-rose-500 text-sm font-medium font-bold hover:underline">View Certificate</a>
+                        <p class="text-black font-extrabold text-xl">Great Learning</p>
+                        <p class="text-gray-700 font-medium">Machine Learning for Python</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold hover:text-rose-700 transition duration-300">View Certificate</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white border rounded-2xl overflow-hidden card" data-aos="fade-left">
-                    <img src="./fs.jpg" alt="" class="w-full h-44 object-cover">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 card" data-aos="fade-left">
+                    <img src="https://placehold.co/600x250/374151/FFFFFF?text=Cert+4" alt="Certificate Image" class="w-full h-44 object-cover">
                     <div class="p-5">
-                        <p class="text-black font-bold">Full Stack in MERN</p>
-                        <div class="items-center mt-4">
-                            <a href="./fullstack.jpg" class="text-rose-500 text-sm font-medium font-bold hover:underline">View Certificate</a>
+                        <p class="text-black font-extrabold text-xl">Full Stack</p>
+                        <p class="text-gray-700 font-medium">Full Stack in MERN</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold hover:text-rose-700 transition duration-300">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white border rounded-2xl overflow-hidden card" data-aos="fade-right">
-                    <img src="./bl.jpg" alt="" class="w-full h-44 object-cover">
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 card" data-aos="fade-right">
+                    <img src="https://placehold.co/600x250/374151/FFFFFF?text=Cert+5" alt="Certificate Image" class="w-full h-44 object-cover">
                     <div class="p-5">
-                        <h1 class="text-xl font-extrabold text-black tracking-tight">Workshop</h1>
-                        <p class="text-black font-bold">BlockChain Development </p>
-                        <div class="items-center mt-4">
-                            <a href="./rust1.jpg" class="text-rose-500 text-sm font-medium font-bold hover:underline">View Certificate</a>
+                        <p class="text-black font-extrabold text-xl">Workshop</p>
+                        <p class="text-gray-700 font-medium">Blockchain Development</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold hover:text-rose-700 transition duration-300">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white border rounded-2xl overflow-hidden card" data-aos="fade-left">
-                    <img src="./lw.jpg" alt="" class="w-full h-44 object-cover">
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 card" data-aos="fade-left">
+                    <img src="https://placehold.co/600x250/374151/FFFFFF?text=Cert+6" alt="Certificate Image" class="w-full h-44 object-cover">
                     <div class="p-5">
-                        <h1 class="text-xl font-extrabold text-black tracking-tight">Workshop</h1>
-                        <p class="text-black font-bold">Data Science</p>
-                        <div class="items-center mt-4">
-                            <a href="./livewire.jpg" class="text-rose-500 text-sm font-medium font-bold hover:underline">View Certificate</a>
+                        <p class="text-black font-extrabold text-xl">Workshop</p>
+                        <p class="text-gray-700 font-medium">Data Science</p>
+                        <div class="mt-4">
+                            <a href="#" class="text-rose-500 text-sm font-bold hover:text-rose-700 transition duration-300">View Certificate</a>
                         </div>
                     </div>
                 </div>
@@ -437,59 +322,56 @@
         </div>
     </div>
 
-     <!--contact-->
+    <!-- Contact Section -->
+    <section class="contact bg-black text-white py-16" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-bold text-4xl sm:text-5xl text-center text-rose-500 mb-12 animate__animated animate__bounceIn">
+                Contact Me
+            </h2>
 
-     <section class="contact" id="contact">
-        <div class="px-40 gap-4 px-3 py-9 bg-black text-white text-center tracking-widest p-9">
-             <p class="justify-center text-center font-bold text-5xl text-left  text-rose-500 animate__animated animate__bounceIn">
-                    Contact
-                </p>
-            
-            <div class="py-6 justify-center text-center font-bold text-left animate__animated animate__bounceout">
-                <div>
-                    <div>
-                        <i class="bi bi-envelope text-white"></i>
-                        <span>devivijay023@gmail.com</span>
-                    </div>
-                    <div>
-                        <i class="bi bi-telephone-inbound"></i>
-                        <span>+91 7708700180</span>
-                    </div>
-                    <div>
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Kanchipuram, India</span>
-                    </div>
+            <div class="flex flex-col space-y-6 items-center py-6 max-w-lg mx-auto text-lg font-medium text-gray-300">
+                <div class="flex items-center space-x-3">
+                    <i class="bi bi-envelope text-rose-500 text-2xl"></i>
+                    <span>devivijay023@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="bi bi-telephone-inbound text-rose-500 text-2xl"></i>
+                    <span>+91 7708700180</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="bi bi-geo-alt-fill text-rose-500 text-2xl"></i>
+                    <span>Kanchipuram, India</span>
+                </div>
             </div>
+
+            <!-- Social Links (repeated for Contact section clarity) -->
+            <div class="flex justify-center gap-6 mt-8">
+                <a href="https://github.com/Saboo24" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-rose-500 hover:border-rose-500 transition duration-300" target="_blank">
+                    <i class="bx bxl-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/amine-hamzaoui-a2453a35b" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-rose-500 hover:border-rose-500 transition duration-300" target="_blank">
+                    <i class="bx bxl-linkedin text-2xl"></i>
+                </a>
+                <a href="https://wa.me/213554139526" class="w-12 h-12 flex items-center justify-center border border-white rounded-full text-white hover:bg-rose-500 hover:border-rose-500 transition duration-300" target="_blank">
+                    <i class="bx bxl-whatsapp text-2xl"></i>
+                </a>
+            </div>
+
         </div>
-        
+    </section>
 
-        <div class="social-links">
-            <a href="https://github.com/Saboo24" class="social-link" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/amine-hamzaoui-a2453a35b" class="social-link" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://wa.me/213554139526" class="social-link" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-        </div>
-            
-     </section>
-   
-
-    <!--footer-->
-
-    <div class="text-center text-sm bg-black text-white">
+    <!-- Footer -->
+    <footer class="text-center text-sm bg-gray-900 text-white py-4 relative">
         Copyright <i class="bi bi-c-circle"></i>2025 Muthulakshmi All Rights Reserved.
 
-        <div class="footer-iconTap">
-            <a href="#Home" class="text-rose-500 text-2xl block mt-2 animate__animated animate__bounce animate__infinite"><i class="bx bx-up-arrow-alt"></i></a>
+        <div class="footer-iconTap absolute bottom-4 right-4 sm:right-8">
+            <a href="#Home" class="text-rose-500 text-3xl block hover:text-rose-400 transition animate__animated animate__bounce animate__infinite">
+                <i class="bx bx-up-arrow-alt"></i>
+            </a>
         </div>
-    </div>
+    </footer>
 
-
-
+    <!-- Scripts -->
     <script>
         // --- JavaScript for Mobile Menu Interactivity ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -501,7 +383,8 @@
             mobileMenu.classList.toggle('hidden');
 
             // Toggle between hamburger and close icon
-            menuIcons.forEach(icon => icon.classList.toggle('hidden'));
+            menuIcons[0].classList.toggle('hidden'); // Hamburger
+            menuIcons[1].classList.toggle('hidden'); // Close
         });
 
         // Close mobile menu when a link is clicked (for better UX)
@@ -510,7 +393,8 @@
             link.addEventListener('click', () => {
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
-                    menuIcons.forEach(icon => icon.classList.toggle('hidden'));
+                    menuIcons[0].classList.remove('hidden'); // Show Hamburger
+                    menuIcons[1].classList.add('hidden');    // Hide Close
                 }
             });
         });
@@ -520,9 +404,7 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200, once: true });
+        AOS.init({ duration: 800, once: true });
     </script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>
-
